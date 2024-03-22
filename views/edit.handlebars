@@ -1,13 +1,24 @@
-<div>
-    <p>name of post</p>
-    <textarea id="name">{{name}}</textarea>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name of Post</label>
+        <textarea class="form-control" id="name" rows="1">{{name}}</textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+        <label for="description" class="form-label">Description of Post</label>
+        <textarea class="form-control" id="description" rows="3">{{description}}</textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-secondary update-button" data-id="{{id}}">Update</button>
+    </div>
+  </div>
 </div>
-<div>
-    <p>description of post</p>
-    <textarea id="description">{{description}}</textarea>
-</div>
-<div>
-    <button class="update-button" data-id="{{id}}">UPDATE</button>
-</div>
-
 <script src="/js/update.js"></script>

@@ -1,3 +1,39 @@
-.hidden {
+/* .hidden {
     display: none;
+} */
+
+body {
+    background-color: rgb(27, 27, 27);
 }
+
+h1 {
+    color: rgb(94, 255, 107);
+}
+
+h2 {
+    color: rgb(94, 255, 107);
+}
+
+h3 {
+    color: rgb(94, 255, 107); 
+}
+
+p{
+    color: white;
+}
+
+h5 {
+    color: black;
+}
+
+.form-label {
+    color: rgb(147, 249, 156);
+}
+
+/* .navbar {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  } */

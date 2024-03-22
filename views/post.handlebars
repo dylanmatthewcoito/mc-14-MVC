@@ -1,52 +1,55 @@
-<div>
-    <h2>{{name}}</h2>
-</div>
-<div>
-    <p>{{description}}</p>
-</div>
-<div>
-    <p>By: {{user.name}}</p>
-</div>
-<div>
-    <p>Created on: {{format_date date_created}}</p>
-</div>
-<div>
-    <p>-----------------------------------</p>
-</div>
-
-{{#if comments.length}}
-    <h3>Comments:</h3>
-        {{#each comments as |comment|}}
-        <div>
-            <p>{{comment.comment}}</p>
-        </div>
-        <div>
-            <p>by: {{comment.user.name}}</p>
-        </div>
-        <div>
-            
-        </div>
-        <div>
-            <p>on: {{ format_date comment.date_created }}</p>
-        </div>
-        <div>
-            <p>-----------------------------------</p>
-        </div>
-        {{/each}}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>{{name}}</h2>
+    </div>
   </div>
-{{/if}}
-
- {{#if logged_in}}
-<form id="comment-form">
-    <label for="comment">Comment on this post:</label>
-    <div>
-        <textarea id="comment" name="comment"></textarea>
+  <div class="row">
+    <div class="col">
+      <p>{{description}}</p>
     </div>
-    <div>
-        <button type="submit">submit comment</button>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>By: {{user.name}}</p>
     </div>
-    <input type="hidden" id="hidden-id" value="{{id}}">
-</form>
- {{/if}}
-
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Created on: {{format_date date_created}}</p>
+    </div>
+  </div>
+  {{#if comments.length}}
+  <div class="row">
+    <div class="col">
+      <h3>Comments:</h3>
+    </div>
+  </div>
+  {{#each comments as |comment|}}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-text">{{comment.comment}}</h5>
+      <h5 class="card-text"><small class="text-muted">by: {{comment.user.name}}</small></h5>
+      <h5 class="card-text"><small class="text-muted">on: {{format_date comment.date_created}}</small></h5>
+    </div>
+  </div>
+  {{/each}}
+  {{/if}}
+  {{#if logged_in}}
+  <div class="row">
+    <div class="col">
+      <form id="comment-form">
+        <div class="mb-3">
+          <label for="comment" class="form-label">Comment on this post:</label>
+          <textarea class="form-control" id="comment" name="comment"></textarea>
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-secondary">Submit Comment</button>
+        </div>
+        <input type="hidden" id="hidden-id" value="{{id}}">
+      </form>
+    </div>
+  </div>
+  {{/if}}
+</div>
 <script src="/js/comment.js"></script>

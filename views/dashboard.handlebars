@@ -1,49 +1,58 @@
-<h1>{{name}}'s Dashboard</h1>
-
-<div>
-  <button class="new-post"> create a new blog post</button>
-</div>
-
-<div id="post-form" class="hidden">
-  <h3>Create a New Post:</h3>
-
-  <form class="new-post-form">
-    <div>
-      <label for="post-name">post name:</label>
-      <input class="form-input" type="text" id="post-name" name="post-name" />
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <h1>{{name}}'s Dashboard</h1>
     </div>
-    <div>
-      <label for="post-desc">description:</label>
-      <textarea id="post-desc" name="post-desc"></textarea>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-secondary new-post">Create a New Blog Post</button>
     </div>
-    <div>
-      <button type="submit">Create</button>
+  </div>
+  <br> 
+  <br>
+  <div id="post-form" class="row mt-4 hidden">
+    <div class="col">
+      <h3>Create a New Post:</h3>
+      <br>
+      <form class="new-post-form">
+        <div class="mb-3">
+          <label for="post-name" class="form-label">Post Name:</label>
+          <input class="form-control" type="text" id="post-name" name="post-name" />
+        </div>
+        <br>
+        <div class="mb-3">
+          <label for="post-desc" class="form-label">Description:</label>
+          <textarea class="form-control" id="post-desc" name="post-desc"></textarea>
+        </div>
+        <br>
+        <div>
+          <button type="submit" class="btn btn-secondary">Create</button>
+        </div>
+      </form>
     </div>
-  </form>
-</div>
-
-{{#if posts.length}}
-  <div class="post-list">
-    <h3>Current Posts:</h3>
-
-    {{#each posts as |post|}}
-  
-      <div>
-        <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+  </div>
+  {{#if posts.length}}
+  <div class="post-list row mt-4">
+    <div class="col">
+      <h3>Current Posts:</h3>
+      {{#each posts as |post|}}
+      <div class="card mb-3">
+        <div class="card-body">
+          <h4 class="card-title"><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+          <h5 class="card-text">{{post.description}}</h5>
+          <div class="btn-group" role="group">
+            <button class="btn btn-danger delete-button" data-id="{{post.id}}">Delete</button>
+            <button class="btn btn-secondary edit-button" data-id="{{post.id}}">Update</button>
+          </div>
+        </div>
       </div>
-      <div>
-        <p>{{post.description}}</p>
-      </div>
-      <div>
-        <button class="delete-button" data-id="{{post.id}}">DELETE</button>
-        <button class="edit-button" data-id="{{post.id}}">UPDATE</button>
-      </div>
-    
-    {{/each}}
+      {{/each}}
+    </div>
   </div>
   {{/if}}
 </div>
-
 <script src="./js/post.js"></script>
 <script src="/js/delete.js"></script>
 <script src="/js/edit.js"></script>
