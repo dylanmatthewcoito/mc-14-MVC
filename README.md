@@ -1,5 +1,9 @@
 # Module 14 Challenge: Model-View-Controller Tech Blog
 
+## Deployed on Heroku
+
+[Tech Blog Heroku Link](https://tech-blog42-817e7f14dc8e.herokuapp.com/)
+
 ## Description 
 
 Tech Blog is a CMS-style blog site where users can create an account, log in, and start publishing their own blog posts. The application follows the MVC paradigm and utilizes Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
