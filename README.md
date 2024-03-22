@@ -17,3 +17,8 @@ Tech Blog is a CMS-style blog site where users can create an account, log in, an
 - Idle Timeout: If a user is idle for a set period, they are prompted to log in again before performing actions like adding, updating, or deleting posts.
 
 Tech Blog provides a platform for users to share their thoughts, engage in discussions, and manage their own blog content. The application focuses on delivering a user-friendly experience with intuitive navigation and seamless interaction.
+
+![Sign-in/Sign-up Page](https://github.com/dylanmatthewcoito/mc-14-MVC/assets/71201051/6835841d-0f4e-470a-a627-3f0ec809abc6)
+![User Dashboard](https://github.com/dylanmatthewcoito/mc-14-MVC/assets/71201051/552a5c9f-9cc6-4664-b477-d406fe01ce64)
+![Blog Posts](https://github.com/dylanmatthewcoito/mc-14-MVC/assets/71201051/18ab7a8e-fa14-4086-b14d-bb860e9d29d8)
+![Blog Post Comments](https://github.com/dylanmatthewcoito/mc-14-MVC/assets/71201051/d2a3e5e0-4f05-413d-9283-9bbdc51cfd15)
