@@ -1,0 +1,20 @@
+<h1>Welcome to the Tech Blog</h1>
+<div>
+    <p>
+        Here you can see/create blog posts and comment on other ppl's posts
+    </p>
+</div>
+{{#each posts as |post|}}
+    <div>
+        <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+    </div>
+    <div>
+        <p>{{post.description}}</p>
+    </div>
+    <div>
+        <p>{{format_date post.date_created}}</p>
+    </div>
+    <div>
+        <p>----------------------------------</p>
+    </div>
+{{/each}}
