@@ -26,3 +26,9 @@ Tech Blog provides a platform for users to share their thoughts, engage in discu
 ![User Dashboard](https://github.com/dylanmatthewcoito/mc-14-MVC/assets/71201051/552a5c9f-9cc6-4664-b477-d406fe01ce64)
 ![Blog Posts](https://github.com/dylanmatthewcoito/mc-14-MVC/assets/71201051/18ab7a8e-fa14-4086-b14d-bb860e9d29d8)
 ![Blog Post Comments](https://github.com/dylanmatthewcoito/mc-14-MVC/assets/71201051/d2a3e5e0-4f05-413d-9283-9bbdc51cfd15)
+
+
+
+## Credits
+
+* This project uses code from the [tech-blog] project, available at https://github.com/Ivana-Djordjevic/tech-blog
